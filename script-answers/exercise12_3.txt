@@ -1,0 +1,4 @@
+ls
+cd usr/src/app
+nano index.js
+
