@@ -1,0 +1,6 @@
+ls
+cd usr/src/app
+app install -y curl
+curl -sL https://deb.nodesource.com/setup_20.x | bash
+app install -y nodejs
+node index.js
