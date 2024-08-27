@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 router.get("/statistics", async (req, res) => {
   const added_todos = (await redis.getAsync("added_todos")) ?? 0;
   res.send({
-    added_todos,
+    added_todos: parseInt(added_todos),
   });
 });
 
