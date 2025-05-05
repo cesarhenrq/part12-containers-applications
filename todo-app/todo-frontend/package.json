@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "add:lib:container": "sh -c 'docker exec todo-frontend-dev npm install \"$1\"' --",
+    "rm:lib:container": "sh -c 'docker exec todo-frontend-dev npm remove \"$1\"' --",
+    "dev:container": "docker-compose -f docker-compose.dev.yml up --build"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.6.3",
